@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mobinius.gameapplication.MainActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum=".4"
+            android:id="@+id/main_linear_layout">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Dealt"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight=".2"
+                android:id="@+id/dealt_text_view"/>
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:id="@+id/dealt_image_view"
+                android:layout_weight=".2" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="winner"
+                android:id="@+id/winner_text_view"
+                android:visibility="invisible"
+                android:textSize="50sp"
+                android:layout_gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start New Game"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp"
+                android:visibility="invisible"
+                android:id="@+id/new_game_text_view"
+                android:layout_below="@+id/winner_text_view"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+    <fragment
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_one_fragment"
+        android:name="com.mobinius.gameapplication.fragments.PlayerOneFragment">
+
+    </fragment>
+
+    <fragment
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_two_fragment"
+        android:name="com.mobinius.gameapplication.fragments.PlayerTwoFragment"/>
+
+    <fragment
+        android:layout_marginTop="30dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_three_fragment"
+        android:name="com.mobinius.gameapplication.fragments.PlayerThreeFragment">
+
+    </fragment>
+    <fragment
+        android:layout_marginTop="30dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_four_fragment"
+        android:name="com.mobinius.gameapplication.fragments.PlayerFourFragment">
+
+    </fragment>
+    <fragment
+        android:layout_marginTop="30dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dealer_fragment"
+        android:name="com.mobinius.gameapplication.fragments.DealerFragment">
+
+    </fragment>
+
+</LinearLayout>
